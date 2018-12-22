@@ -1,21 +1,134 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+  <h1>Org Vehicle Contorller</h1>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+
+<form [formGroup]="exampleForm">
+  <div class="form-group">
+    <button (click)="load()">Load</button>
+    <button (click)="ssubmit()">Submit</button>
+    <br>
+    <label>Absolute Owner:</label>
+    <input class="form-control" formControlName="abOwner">
+    <br>
+    <label>Barcode:</label>
+    <input class="form-control" formControlName="barCode">
+    <br>
+    <label>Brand:</label>
+    <input class="form-control" formControlName="brand">
+    <br>
+    <label>Build Year:</label>
+    <input class="form-control" formControlName="buildYear">
+    <br>
+    <label>Chasis No:</label>
+    <input class="form-control" formControlName="chasisNo">
+    <br>
+    <label>Class of Vehicle:</label>
+    <input class="form-control" formControlName="vehicleClass">
+    <br>
+    <label>Country of Origin:</label>
+    <input class="form-control" formControlName="countryOrigin">
+    <br>
+    <label>Cylinder Capacity:</label>
+    <input class="form-control" formControlName="cylinderCapacity">
+    <br>
+    <label>Email:</label>
+    <input class="form-control" formControlName="email">
+    <br>
+    <label>Engine No:</label>
+    <input class="form-control" formControlName="engineNo">
+    <br>
+    <label>First Reg Date:</label>
+    <input class="form-control" formControlName="firstRegDate">
+    <br>
+    <label>Fuel Type:</label>
+    <input class="form-control" formControlName="fuelType">
+    <br>
+    <label>Image:</label>
+    <input class="form-control" formControlName="image">
+    <br>
+    <label>IMEI:</label>
+    <input class="form-control" formControlName="imei">
+    <br>
+    <label>Internal Ref Number:</label>
+    <input class="form-control" formControlName="internalRefNumber">
+    <br>
+    <label>Make:</label>
+    <input class="form-control" formControlName="make">
+    <br>
+    <label>Mobile No:</label>
+    <input class="form-control" formControlName="mobileNo">
+    <br>
+    <label>Model:</label>
+    <input class="form-control" formControlName="model">
+    <br>
+    <label>odoMeterReading:</label>
+    <input class="form-control" formControlName="odoMeterReading">
+    <br>
+    <label>officialMobileNumber:</label>
+    <input class="form-control" formControlName="officialMobileNumber">
+    <br>
+    <label>officialPhoneNum:</label>
+    <input class="form-control" formControlName="officialPhoneNum">
+    <br>
+    <label>orgId:</label>
+    <input class="form-control" formControlName="orgId">
+    <br>
+    <label>photo:</label>
+    <input class="form-control" formControlName="photo">
+    <br>
+    <label>portEntryPassNum:</label>
+    <input class="form-control" formControlName="portEntryPassNum">
+    <br>
+    <label>portEntryValidPeriod:</label>
+    <input class="form-control" formControlName="portEntryValidPeriod">
+    <br>
+    <label>previousOwnerDetails:</label>
+    <input class="form-control" formControlName="previousOwnerDetails">
+    <br>
+    <label>purchasedValue:</label>
+    <input class="form-control" formControlName="purchasedValue">
+    <br>
+    <label>regNumber:</label>
+    <input class="form-control" formControlName="regNumber">
+    <br>
+    <label>registeredAddress:</label>
+    <input class="form-control" formControlName="registeredAddress">
+    <br>
+    <label>rmvRegNumber:</label>
+    <input class="form-control" formControlName="rmvRegNumber">
+    <br>
+    <label>statusWhenRegister:</label>
+    <input class="form-control" formControlName="statusWhenRegister">
+    <br>
+    <label>taxationClass:</label>
+    <input class="form-control" formControlName="taxationClass">
+    <br>
+    <label>type:</label>
+    <input class="form-control" formControlName="type">
+    <br>
+    <label>typeOfIdDocument:</label>
+    <input class="form-control" formControlName="typeOfIdDocument">
+    <br>
+    <label>vehicleId:</label>
+    <input class="form-control" formControlName="vehicleId">
+    <br>
+    <label>vehicleInsurance:</label>
+    <input class="form-control" formControlName="vehicleInsurance">
+    <br>
+    <label>warranty:</label>
+    <input class="form-control" formControlName="warranty">
+    <br>
+    <label>warrantyPeriod:</label>
+    <input class="form-control" formControlName="warrantyPeriod">
+    <br>
+    <label>weightUnladenGross:</label>
+    <input class="form-control" formControlName="weightUnladenGross">
+    <br>
+
+
+  </div>
+</form>
+
 
 <router-outlet></router-outlet>
